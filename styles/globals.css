@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Calendar styling */
+.custom-calendar {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+/* Styling for the calendar navigation (month/year header) */
+.react-calendar__navigation {
+  background-color: #5b32c7; /* Purple color */
+  color: white;
+  border-radius: 10px 10px 0 0; /* To match the rounded card style */
+  padding: 10px;
+}
+
+.react-calendar__navigation button {
+  color: white;
+  font-weight: bold;
+}
+
+/* Styling for the weekday names (Mon, Tue, etc.) */
+.react-calendar__month-view__weekdays {
+  background-color: #5b32c7; /* Purple color */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Styling for individual weekday names */
+.react-calendar__month-view__weekdays__weekday {
+  color: white;
+}
+
+/* Styling for the days */
+.react-calendar__month-view__days__day {
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #ccc;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: red; /* Red color for weekends */
+}
+
+.react-calendar__tile--active {
+  background-color: yellow;
+  color: black;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 10px 0;
+  background: none;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+}
+
+.react-calendar__tile:hover,
+.react-calendar__tile:focus {
+  background-color: #f0f0f0;
+  border: 1px solid #5b32c7;
+}
+
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Custom DatePicker Styles */
+.custom-calendar {
+  .react-datepicker__month-container {
+      border: none;
+  }
+
+  .react-datepicker__header {
+      background-color: #5b32c7; /* Purple color */
+      border-bottom: none;
+      border-top-left-radius: 0.75rem;
+      border-top-right-radius: 0.75rem;
+  }
+
+  .react-datepicker__current-month {
+      color: white;
+      font-weight: bold;
+  }
+
+  .react-datepicker__day-names {
+      background-color: #5b32c7; /* Purple color */
+      color: white;
+  }
+
+  .react-datepicker__day-name, .react-datepicker__day {
+      margin: 0.166rem;
+  }
+
+  .react-datepicker__day--selected, .react-datepicker__day--keyboard-selected {
+      background-color: yellow;
+      color: black;
+  }
+
+  .react-datepicker__day--weekend {
+      color: red;
+  }
+
+  .react-datepicker__day--outside-month {
+      color: #ccc;
+  }
+
+  .react-datepicker__navigation {
+      top: 20px;
+  }
+
+  .react-datepicker__navigation-icon {
+      filter: invert(1);
+  }
+}
+
+/* Styling for the dot next to appointment dates */
+.react-calendar__tile .dot {
+  height: 6px;
+  width: 6px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+}
